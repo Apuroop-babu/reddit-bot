@@ -1,8 +1,8 @@
 import praw
-username="confused_soul77"
-password="apuroop@123"
-client_id="OmTYKdbldh_bGDoXlL8asw"
-client_secret="NddtVciwLDFzfdcu9gTXhlllo9cVSA"
+username="your_username"
+password="your_password"
+client_id="Your_id"
+client_secret="Your_secret"
 reddit_instance=praw.Reddit(client_id=client_id,
                             client_secret=client_secret,
                             username=username,
@@ -20,4 +20,5 @@ comments=submission.comments
 print(len(comments))
 for comment in comments:
     if "water" in comment.body:
+
         comment.reply("your comment contains water")
